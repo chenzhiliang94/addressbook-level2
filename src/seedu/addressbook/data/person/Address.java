@@ -32,7 +32,7 @@ public class Address {
             throw new IllegalValueException(MESSAGE_ADDRESS_CONSTRAINTS);
         }
         this.value = trimmedAddress;
-        String[] splitAddress = this.value.split(",");
+        String[] splitAddress = trimmedAddress.split(",");
         Block = new Block(splitAddress[0]);
         Street = new Street(splitAddress[1]);
         Unit = new Unit(splitAddress[2]);
